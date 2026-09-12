@@ -4,6 +4,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bit-N-Bulid — Orbital Traffic Management Console",
   description: "Autonomous orbital traffic management system, debris screening, and collision avoidance mission control console.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
