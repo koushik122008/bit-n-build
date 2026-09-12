@@ -1,0 +1,230 @@
+{
+  "metadata": {
+    "name": "Tracking Telemetry and System Status Data",
+    "description": "Real-time and historical telemetry data for the Bit-N-Bulid orbital traffic management dashboard",
+    "problem_statement": "Space Tech & Orbital Sustainability: Build autonomous agents to track space debris, optimize satellite maneuver planning, or coordinate open-source orbital traffic management to protect global communication infrastructure.",
+    "generated": "2026-09-12",
+    "refresh_interval_seconds": 60,
+    "data_validity_hours": 24
+  },
+  "system_status": {
+    "timestamp": "2026-09-12T14:30:00Z",
+    "database_status": "NOMINAL",
+    "agents_online": {
+      "tracking_agent": true,
+      "planning_agent": true,
+      "coordination_agent": true
+    },
+    "last_tracking_epoch": "2026-09-12T14:25:00Z",
+    "screening_cycle_count": 847,
+    "total_objects_tracked": 607,
+    "active_events": 45,
+    "resolved_events_total": 287,
+    "pending_maneuver_plans": 32,
+    "coordination_decisions_total": 156
+  },
+  "orbital_regimes": {
+    "leo": {
+      "altitude_range_km": [200, 2000],
+      "objects_count": 587,
+      "debris_count": 320,
+      "communication_satellites": 267,
+      "conjunction_rate_per_day": 3.2,
+      "characteristics": "Primary operations zone for communication constellations and highest debris density"
+    },
+    "medeo": {
+      "altitude_range_km": [2000, 35786],
+      "objects_count": 18,
+      "debris_count": 8,
+      "communication_satellites": 10,
+      "conjunction_rate_per_day": 0.1,
+      "characteristics": "Medium Earth orbit, GPS and some comm satellites, lower conjunction risk"
+    },
+    "geo": {
+      "altitude_range_km": [35786, 36000],
+      "objects_count": 2,
+      "debris_count": 0,
+      "communication_satellites": 2,
+      "conjunction_rate_per_day": 0.01,
+      "characteristics": "Geostationary orbit for direct broadcast and weather satellites"
+    }
+  },
+  "tracking_statistics": {
+    "propagation_accuracy": {
+      "sgp4_model": "Standard",
+      "typical_position_error_km": 0.5,
+      "typical_velocity_error_km_s": 0.001,
+      "update_frequency_seconds": 60
+    },
+    "catalog_health": {
+      "fresh_tle_age_hours": 24,
+      "stale_tle_count": 3,
+      "objects_needing_update": 12,
+      "total_catalog_size": 607
+    },
+    "screening_performance": {
+      "pairs_screened_per_cycle": 183921,
+      "screening_distance_km": 5.0,
+      "screening_horizon_hours": 24,
+      "average_computation_time_ms": 145,
+      "conjunctions_detected_per_cycle": 1.2
+    }
+  },
+  "debris_population": {
+    "by_source_event": [
+      {
+        "event": "Cosmos 1408 ASAT Test",
+        "date": "2021-11-15",
+        "tracked_fragments": 150,
+        "estimated_untracked_cm_plus": 45000,
+        "altitude_debris_km": 480,
+        "contributing_to_conjunctions": true
+      },
+      {
+        "event": "Iridium 33 / Cosmos 2251 Collision",
+        "date": "2009-02-10",
+        "tracked_fragments": 220,
+        "estimated_untracked_cm_plus": 85000,
+        "altitude_debris_km": 780,
+        "contributing_to_conjunctions": true
+      },
+      {
+        "event": "Fengyun-1C ASAT Test",
+        "date": "2007-01-11",
+        "tracked_fragments": 280,
+        "estimated_untracked_cm_plus": 125000,
+        "altitude_debris_km": 865,
+        "contributing_to_conjunctions": true
+      },
+      {
+        "event": "Other Fragmentation Events",
+        "date": "Various",
+        "tracked_fragments": 95,
+        "estimated_untracked_cm_plus": 89000,
+        "altitude_debris_km": "Various",
+        "contributing_to_conjunctions": false
+      }
+    ],
+    "orbital_bands_with_high_debris": [
+      {"altitude_km": 480, "density_pct": 18, "primary_source": "Cosmos 1408"},
+      {"altitude_km": 550, "density_pct": 15, "primary_source": "Starlink operations + debris drift"},
+      {"altitude_km": 780, "density_pct": 22, "primary_source": "Iridium 33/Cosmos 2251 collision"},
+      {"altitude_km": 865, "density_pct": 25, "primary_source": "Fengyun-1C ASAT test"}
+    ]
+  },
+  "communication_infrastructure_assets": {
+    "total_tracked_comm_satellites": 267,
+    "by_operator": [
+      {"operator": "SpaceX", "constellation": "Starlink", "satellites": 158, "status": "ACTIVE"},
+      {"operator": "Iridium Communications", "constellation": "Iridium NEXT", "satellites": 66, "status": "ACTIVE"},
+      {"operator": "OneWeb Ltd", "constellation": "OneWeb", "satellites": 43, "status": "ACTIVE"},
+      {"operator": "Globalstar Inc", "constellation": "Globalstar", "satellites": 15, "status": "ACTIVE"}
+    ],
+    "services_covered": [
+      "Broadband internet (rural/remote)",
+      "Maritime communications",
+      "Aviation communications",
+      "Emergency/maritime distress",
+      "IoT/M2M connectivity",
+      "Voice communications (polar regions)",
+      "Asset tracking"
+    ],
+    "population_dependent_on_infrastructure": "3.2 billion estimated users",
+    "critical_sectors_served": ["Healthcare", "Education", "Emergency Response", "Maritime", "Aviation", "Agriculture", "Finance"]
+  },
+  "mission_metrics": {
+    "safety_statistics": {
+      "collisions_prevented_estimate": 12,
+      "maneuvers_executed": 89,
+      "near_misses_avoided": 45,
+      "debris_satellites_protected": 267
+    },
+    "operational_efficiency": {
+      "average_response_time_minutes": 5,
+      "maneuver_plan_generation_ms": 230,
+      "coordination_decision_time_ms": 85,
+      "average_delta_v_used_m_s": 0.85
+    },
+    "impact_statistics": {
+      "global_comms_protected": "Yes",
+      "debris_tracking_coverage_leo_pct": 98,
+      "conjunction_prediction_accuracy_pct": 95,
+      "operator_satisfaction_index": 8.7
+    }
+  },
+  "recent_activity_feed": [
+    {
+      "timestamp": "2026-09-12T14:25:00Z",
+      "type": "TRACKING_CYCLE",
+      "message": "Tracking agent completed screening cycle: 607 objects propagated, 183,921 pairs screened",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-09-12T14:20:00Z",
+      "type": "CONJUNCTION_DETECTED",
+      "message": "CRITICAL conjunction found: COSMOS 1408 FRAG vs STARLINK-1007, Pc=3.2%, miss=0.035km",
+      "severity": "CRITICAL"
+    },
+    {
+      "timestamp": "2026-09-12T14:15:00Z",
+      "type": "MANEUVER_PLAN_CREATED",
+      "message": "Maneuver plan generated for Iridium 102 vs Iridium 33 debris, recommended delta-v 0.5 m/s prograde",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-09-12T14:10:00Z",
+      "type": "COORDINATION_RESOLVED",
+      "message": "Coordination decision made for Starlink event: OPERATOR-ALPHA plan accepted over OPERATOR-BETA",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-09-12T14:05:00Z",
+      "type": "DATA_UPDATE",
+      "message": "Updated TLE data received from Celestrak for Starlink group (158 satellites refreshed)",
+      "severity": "INFO"
+    },
+    {
+      "timestamp": "2026-09-12T13:58:00Z",
+      "type": "ALERT_BROADCAST",
+      "message": "WebSocket alert sent: New CRITICAL conjunction event to all connected dashboard clients",
+      "severity": "INFO"
+    }
+  ],
+  "visualization_data": {
+    "globe_3d": {
+      "earth_radius_km": 6371,
+      "deployment_scale_factor": 1.5,
+      "object_render_size_debris": 2.5,
+      "object_render_size_satellites": 3.5,
+      "conjunction_line_color_high": "#FF4757",
+      "conjunction_line_color_medium": "#F2A93C",
+      "conjunction_line_color_low": "#35D0BA"
+    },
+    "dashboard_cards": {
+      "tracked_objects_card": {
+        "value": 607,
+        "subtitle": "320 DEBRIS OBJECTS · SATELLITES + DEBRIS",
+        "trend": "INCREASING",
+        "trend_note": "+3 objects this cycle"
+      },
+      "active_alerts_card": {
+        "value": 45,
+        "subtitle": "CRITICAL: 3 · HIGH: 8 · MEDIUM: 15 · LOW: 19",
+        "trend": "ELEVATED",
+        "trend_note": "+2 since last hour"
+      },
+      "mean_pc_card": {
+        "value": "4.2e-3",
+        "subtitle": "FOSTER/CHAN 2D PROJECTION",
+        "trend": "STABLE",
+        "trend_note": "Within historical norms"
+      },
+      "system_status_card": {
+        "value": "NOMINAL",
+        "subtitle": "ALL AGENTS ONLINE · DB LINK OK",
+        "trend": "STABLE",
+        "trend_note": "Operating at full capacity"
+      }
+    }
+  }
+}

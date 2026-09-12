@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "name": "Active Conjunction Events - Debris vs Communication Infrastructure",
+    "description": "Realistic conjunction events showing space debris threatening global communication satellites",
+    "problem_statement": "Space Tech & Orbital Sustainability: Build autonomous agents to track space debris, optimize satellite maneuver planning, or coordinate open-source orbital traffic management to protect global communication infrastructure.",
+    "generated": "2026-09-12",
+    "total_events": 45,
+    "risk_distribution": {
+      "CRITICAL": 3,
+      "HIGH": 8,
+      "MEDIUM": 15,
+      "LOW": 19
+    }
+  },
+  "conjunctions": [
+    {
+      "id": 1,
+      "priority": "CRITICAL",
+      "object_a": {
+        "norad_id": 33590,
+        "name": "COSMOS 1408 FRAG A-004",
+        "type": "DEBRIS",
+        "source_event": "Cosmos 1408 ASAT Test (2021)",
+        "orbit_type": "LEO",
+        "altitude_km": 480
+      },
+      "object_b": {
+        "norad_id": 44713,
+        "name": "STARLINK-1007",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "SpaceX",
+        "constellation": "Starlink",
+        "orbit_type": "LEO",
+        "altitude_km": 550
+      },
+      "miss_distance_km": 0.035,
+      "relative_velocity_km_s": 12.4,
+      "pc": 3.2e-2,
+      "risk_level": "CRITICAL",
+      "tca": "2026-09-12T15:30:00Z",
+      "hours_to_tca": 2.5,
+      "data_quality": "HIGH",
+      "threat_assessment": "CRITICAL - Debris from Cosmos 1408 ASAT test on direct collision course with Starlink satellite. This debris fragment was created during the 2021 anti-satellite test and continues orbiting at 480km, now intersecting with Starlink's operational altitude.",
+      "recommended_action": "IMMEDIATE MANEUVER REQUIRED - Probability of collision exceeds 1% threshold. Starlink-1007 should execute avoidance burn within 2 hours.",
+      "constellation_impact": "If collision occurs, would generate additional debris threatening entire Starlink shell and nearby operations"
+    },
+    {
+      "id": 2,
+      "priority": "CRITICAL",
+      "object_a": {
+        "norad_id": 33560,
+        "name": "IRIDIUM 33 FRAG A-005",
+        "type": "DEBRIS",
+        "source_event": "Iridium 33 / Cosmos 2251 Collision (2009)",
+        "orbit_type": "LEO",
+        "altitude_km": 780
+      },
+      "object_b": {
+        "norad_id": 41179,
+        "name": "IRIDIUM 102",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "Iridium Communications",
+        "constellation": "Iridium NEXT",
+        "orbit_type": "LEO",
+        "altitude_km": 780
+      },
+      "miss_distance_km": 0.042,
+      "relative_velocity_km_s": 11.7,
+      "pc": 2.8e-2,
+      "risk_level": "CRITICAL",
+      "tca": "2026-09-12T18:45:00Z",
+      "hours_to_tca": 5.75,
+      "data_quality": "HIGH",
+      "threat_assessment": "CRITICAL - Fragment from the 2009 Iridium-Cosmos collision threatening operational Iridium NEXT satellite in nearly identical orbit. The 2009 collision created this debris, and over 15 years it has evolved to threaten the replacement constellation.",
+      "recommended_action": "IMMEDIATE MANEUVER REQUIRED - Collision probability of 2.8% is unacceptable. Iridium 102 must perform avoidance maneuver.",
+      "constellation_impact": "Direct threat to Iridium's voice and data services covering poles and remote regions"
+    },
+    {
+      "id": 3,
+      "priority": "CRITICAL",
+      "object_a": {
+        "norad_id": 33573,
+        "name": "FENGYUN 1C FRAG A-003",
+        "type": "DEBRIS",
+        "source_event": "Fengyun-1C ASAT Test (2007)",
+        "orbit_type": "LEO",
+        "altitude_km": 865
+      },
+      "object_b": {
+        "norad_id": 48274,
+        "name": "ONEWEB-1",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "OneWeb Ltd",
+        "constellation": "OneWeb",
+        "orbit_type": "LEO",
+        "altitude_km": 1200
+      },
+      "miss_distance_km": 0.058,
+      "relative_velocity_km_s": 10.2,
+      "pc": 1.5e-2,
+      "risk_level": "CRITICAL",
+      "tca": "2026-09-12T20:20:00Z",
+      "hours_to_tca": 7.33,
+      "data_quality": "HIGH",
+      "threat_assessment": "CRITICAL - Fengyun-1C ASAT debris fragment from 2007 threatening OneWeb satellite. Although from a different altitude band, orbital perturbations have brought this fragment into OneWeb's path.",
+      "recommended_action": "MANEUVER REQUIRED WITHIN 6 HOURS - Probability 1.5% requires action to protect OneWeb infrastructure.",
+      "constellation_impact": "Could cascade to other OneWeb satellites in similar orbital planes"
+    },
+    {
+      "id": 4,
+      "priority": "HIGH",
+      "object_a": {
+        "norad_id": 33589,
+        "name": "COSMOS 1408 FRAG A-003",
+        "type": "DEBRIS",
+        "source_event": "Cosmos 1408 ASAT Test (2021)",
+        "orbit_type": "LEO",
+        "altitude_km": 480
+      },
+      "object_b": {
+        "norad_id": 44715,
+        "name": "STARLINK-1009",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "SpaceX",
+        "constellation": "Starlink",
+        "orbit_type": "LEO",
+        "altitude_km": 550
+      },
+      "miss_distance_km": 0.120,
+      "relative_velocity_km_s": 11.8,
+      "pc": 6.5e-3,
+      "risk_level": "HIGH",
+      "tca": "2026-09-12T16:15:00Z",
+      "hours_to_tca": 3.25,
+      "data_quality": "HIGH",
+      "threat_assessment": "HIGH RISK - Cosmos 1408 debris fragment approaching Starlink satellite. Though probability is lower than ID 1, still exceeds 0.1% operational threshold.",
+      "recommended_action": "SCHEDULED MANEUVER WITHIN 4 HOURS - Execute avoidance burn during next available window.",
+      "constellation_impact": "Part of ongoing threat pattern from Cosmos 1408 debris to Starlink constellation"
+    },
+    {
+      "id": 5,
+      "priority": "HIGH",
+      "object_a": {
+        "norad_id": 33576,
+        "name": "FENGYUN 1C FRAG A-006",
+        "type": "DEBRIS",
+        "source_event": "Fengyun-1C ASAT Test (2007)",
+        "orbit_type": "LEO",
+        "altitude_km": 865
+      },
+      "object_b": {
+        "norad_id": 48276,
+        "name": "ONEWEB-3",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "OneWeb Ltd",
+        "constellation": "OneWeb",
+        "orbit_type": "LEO",
+        "altitude_km": 1200
+      },
+      "miss_distance_km": 0.180,
+      "relative_velocity_km_s": 9.5,
+      "pc": 4.2e-3,
+      "risk_level": "HIGH",
+      "tca": "2026-09-13T08:00:00Z",
+      "hours_to_tca": 19.0,
+      "data_quality": "MEDIUM",
+      "threat_assessment": "HIGH RISK - Fengyun debris approaching OneWeb satellite. Requires planning but not immediate emergency action.",
+      "recommended_action": "PLAN MANEUVER WITHIN 12 HOURS - Generate avoidance options and coordinate with OneWeb operations.",
+      "constellation_impact": "OneWeb provides critical connectivity to underserved regions; protection is essential"
+    },
+    {
+      "id": 6,
+      "priority": "HIGH",
+      "object_a": {
+        "norad_id": 33600,
+        "name": "COSMOS 1408 FRAG B-005",
+        "type": "DEBRIS",
+        "source_event": "Cosmos 1408 ASAT Test (2021)",
+        "orbit_type": "LEO",
+        "altitude_km": 480
+      },
+      "object_b": {
+        "norad_id": 44722,
+        "name": "STARLINK-1016",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "SpaceX",
+        "constellation": "Starlink",
+        "orbit_type": "LEO",
+        "altitude_km": 550
+      },
+      "miss_distance_km": 0.210,
+      "relative_velocity_km_s": 12.1,
+      "pc": 3.8e-3,
+      "risk_level": "HIGH",
+      "tca": "2026-09-12T22:30:00Z",
+      "hours_to_tca": 9.5,
+      "data_quality": "HIGH",
+      "threat_assessment": "HIGH RISK - Recent Cosmos 1408 debris fragment intersecting Starlink path.",
+      "recommended_action": "MONITOR CLOSELY - If probability increases, execute maneuver within 6 hours.",
+      "constellation_impact": "Another Starlink satellite threatened by same debris cloud"
+    },
+    {
+      "id": 7,
+      "priority": "MEDIUM",
+      "object_a": {
+        "norad_id": 33584,
+        "name": "FENGYUN 1C FRAG B-004",
+        "type": "DEBRIS",
+        "source_event": "Fengyun-1C ASAT Test (2007)",
+        "orbit_type": "LEO",
+        "altitude_km": 865
+      },
+      "object_b": {
+        "norad_id": 41181,
+        "name": "IRIDIUM 104",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "Iridium Communications",
+        "constellation": "Iridium NEXT",
+        "orbit_type": "LEO",
+        "altitude_km": 780
+      },
+      "miss_distance_km": 0.560,
+      "relative_velocity_km_s": 8.7,
+      "pc": 8.5e-4,
+      "risk_level": "MEDIUM",
+      "tca": "2026-09-13T14:15:00Z",
+      "hours_to_tca": 21.25,
+      "data_quality": "MEDIUM",
+      "threat_assessment": "MEDIUM RISK - Requires attention but not urgent. Debris from major collision event crossing Iridium operational band.",
+      "recommended_action": "PREPARE CONTINGENCY PLAN - Monitor trajectory and have maneuver ready if probability increases.",
+      "constellation_impact": "Another Iridium satellite potentially threatened by long-lived collision debris"
+    },
+    {
+      "id": 8,
+      "priority": "MEDIUM",
+      "object_a": {
+        "norad_id": 33568,
+        "name": "COSMOS 2251 FRAG C-003",
+        "type": "DEBRIS",
+        "source_event": "Iridium 33 / Cosmos 2251 Collision (2009)",
+        "orbit_type": "LEO",
+        "altitude_km": 780
+      },
+      "object_b": {
+        "norad_id": 48278,
+        "name": "ONEWEB-5",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "OneWeb Ltd",
+        "constellation": "OneWeb",
+        "orbit_type": "LEO",
+        "altitude_km": 1200
+      },
+      "miss_distance_km": 0.780,
+      "relative_velocity_km_s": 9.2,
+      "pc": 5.2e-4,
+      "risk_level": "MEDIUM",
+      "tca": "2026-09-13T06:45:00Z",
+      "hours_to_tca": 13.75,
+      "data_quality": "GOOD",
+      "threat_assessment": "MEDIUM RISK - Debris from historic collision crossing OneWeb operational altitude.",
+      "recommended_action": "PLAN AVOIDANCE - Generate maneuver options within 24 hours if probability remains at this level.",
+      "constellation_impact": "Continuing threat from 2009 collision debris to modern communications infrastructure"
+    },
+    {
+      "id": 9,
+      "priority": "LOW",
+      "object_a": {
+        "norad_id": 33575,
+        "name": "FENGYUN 1C FRAG A-005",
+        "type": "DEBRIS",
+        "source_event": "Fengyun-1C ASAT Test (2007)",
+        "orbit_type": "LEO",
+        "altitude_km": 865
+      },
+      "object_b": {
+        "norad_id": 28929,
+        "name": "GLOBALSTAR-M058",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "Globalstar Inc",
+        "constellation": "Globalstar",
+        "orbit_type": "LEO",
+        "altitude_km": 1400
+      },
+      "miss_distance_km": 1.240,
+      "relative_velocity_km_s": 7.6,
+      "pc": 1.8e-4,
+      "risk_level": "LOW",
+      "tca": "2026-09-14T02:00:00Z",
+      "hours_to_tca": 33.0,
+      "data_quality": "GOOD",
+      "threat_assessment": "LOW RISK - Distant miss between Fengyun debris and Globalstar satellite. Probability within acceptable operational limits.",
+      "recommended_action": "CONTINUE MONITORING - No immediate action required but maintain watch through TCA.",
+      "constellation_impact": "Minimal - Low probability event with margin for error"
+    },
+    {
+      "id": 10,
+      "priority": "LOW",
+      "object_a": {
+        "norad_id": 33563,
+        "name": "IRIDIUM 33 FRAG B-003",
+        "type": "DEBRIS",
+        "source_event": "Iridium 33 / Cosmos 2251 Collision (2009)",
+        "orbit_type": "LEO",
+        "altitude_km": 780
+      },
+      "object_b": {
+        "norad_id": 44719,
+        "name": "STARLINK-1013",
+        "type": "COMMUNICATION SATELLITE",
+        "operator": "SpaceX",
+        "constellation": "Starlink",
+        "orbit_type": "LEO",
+        "altitude_km": 550
+      },
+      "miss_distance_km": 1.560,
+      "relative_velocity_km_s": 8.1,
+      "pc": 9.2e-5,
+      "risk_level": "LOW",
+      "tca": "2026-09-13T10:30:00Z",
+      "hours_to_tca": 17.5,
+      "data_quality": "GOOD",
+      "threat_assessment": "LOW RISK - Distant approach between collision debris and Starlink. Below operational concern threshold.",
+      "recommended_action": "NO ACTION REQUIRED - Probability well below threshold. Continue standard tracking.",
+      "constellation_impact": "Negligible - No expected impact on Starlink operations"
+    }
+  ],
+  "constellation_threat_summary": {
+    "starlink": {
+      "satellites_under_threat": 18,
+      "critical_events": 1,
+      "high_events": 4,
+      "medium_events": 6,
+      "low_events": 7,
+      "primary_debris_sources": ["Cosmos 1408 ASAT Test", "Iridium 33/Cosmos 2251 Collision"],
+      "recommendation": "INCREASED MONITORING - Starlink's 550km altitude band is experiencing elevated conjunction rates from multiple debris sources"
+    },
+    "iridium_next": {
+      "satellites_under_threat": 8,
+      "critical_events": 1,
+      "high_events": 2,
+      "medium_events": 3,
+      "low_events": 2,
+      "primary_debris_sources": ["Iridium 33/Cosmos 2251 Collision (self-threat)"],
+      "recommendation": "ATTENTION REQUIRED - Iridium NEXT satellites share orbit with debris from the original Iridium 33, creating unique self-targeting risk"
+    },
+    "oneweb": {
+      "satellites_under_threat": 12,
+      "critical_events": 1,
+      "high_events": 2,
+      "medium_events": 4,
+      "low_events": 5,
+      "primary_debris_sources": ["Fengyun-1C ASAT Test", "Cosmos 1408 ASAT Test", "Iridium 33/Cosmos 2251 Collision"],
+      "recommendation": "PLAN FOR FREQUENT MANEUVERS - OneWeb at 1200km intersects debris from multiple fragmentation events at different altitudes"
+    },
+    "globalstar": {
+      "satellites_under_threat": 4,
+      "critical_events": 0,
+      "high_events": 0,
+      "medium_events": 1,
+      "low_events": 3,
+      "primary_debris_sources": ["Fengyun-1C ASAT Test"],
+      "recommendation": "STANDARD MONITORING - Lower threat level currently but subject to similar risks as other constellations"
+    }
+  },
+  "statistical_analysis": {
+    "average_miss_distance_km": 0.892,
+    "average_relative_velocity_km_s": 10.1,
+    "average_pc": 4.2e-3,
+    "conjunctions_per_day_estimate": 3.2,
+    "critical_event_frequency": "Once every 2-3 weeks",
+    "highest_threat_altitude_band": "500-600km (Starlink operations zone)",
+    "most_dangerous_debris_source": "Cosmos 1408 ASAT Test (2021) - freshest debris, highest velocity dispersion"
+  }
+}

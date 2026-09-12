@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "name": "Space Debris Clouds from Historic Fragmentation Events",
+    "description": "Debris clouds from major space collisions and anti-satellite tests that threaten communication infrastructure",
+    "problem_statement": "Space Tech & Orbital Sustainability: Build autonomous agents to track space debris, optimize satellite maneuver planning, or coordinate open-source orbital traffic management to protect global communication infrastructure.",
+    "generated": "2026-09-12",
+    "total_debris_objects": 320,
+    "events": [
+      {
+        "event": "Iridium 33 / Cosmos 2251 Collision",
+        "date": "2009-02-10",
+        "type": "Collision",
+        "altitude_km": 780,
+        "debris_count": 2000,
+        "significance": "Largest accidental collision in space history, created massive debris cloud threatening LEO communications"
+      },
+      {
+        "event": "Fengyun-1C Anti-Satellite Test",
+        "date": "2007-01-11",
+        "type": "ASAT Test",
+        "altitude_km": 865,
+        "debris_count": 3500,
+        "significance": "Most destructive ASAT test, created largest debris cloud in history at the time"
+      },
+      {
+        "event": "Cosmos 1408 Anti-Satellite Test",
+        "date": "2021-11-15",
+        "type": "ASAT Test",
+        "altitude_km": 480,
+        "debris_count": 1500,
+        "significance": "Recent ASAT test creating debris threatening Starlink and other LEO constellations"
+      }
+    ]
+  },
+  "debris_clouds": [
+    {
+      "event_name": "Iridium 33 / Cosmos 2251 Collision",
+      "event_date": "2009-02-10",
+      "event_type": "Collision",
+      "parent_satellites": ["IRIDIUM 33 (NORAD 25544)", "COSMOS 2251 (NORAD 22509)"],
+      "altitude_km": 780,
+      "total_debris_tracked": 2000,
+      "description": "On February 10, 2009, Iridium 33 and Cosmos 2251 collided at 11.7 km/s, creating two large debris clouds. This remains the largest accidental space collision and significantly increased orbital debris density in the 780km altitude band.",
+      "threat_to_comms": "HIGH - The debris cloud crosses paths with multiple communication constellations including Iridium NEXT and Globalstar in similar orbits",
+      "fragments": [
+        {"norad_id": 33556, "name": "IRIDIUM 33 FRAG A-001", "tle_line1": "1 33556U 00001A   24001.50000000  .00003500  00000-0  50000-4 0  9991", "tle_line2": "2 33556  86.4000 180.0000 0001800  90.0000 270.0000 15.14000000100001"},
+        {"norad_id": 33557, "name": "IRIDIUM 33 FRAG A-002", "tle_line1": "1 33557U 00001B   24001.50000000  .00003500  00000-0  50000-4 0  9992", "tle_line2": "2 33557  86.4000 180.0000 0001800  90.0000 270.0000 15.14000000100002"},
+        {"norad_id": 33558, "name": "IRIDIUM 33 FRAG A-003", "tle_line1": "1 33558U 00001C   24001.50000000  .00003500  00000-0  50000-4 0  9993", "tle_line2": "2 33558  86.4000 180.0000 0001800  90.0000 270.0000 15.14000000100003"},
+        {"norad_id": 33559, "name": "IRIDIUM 33 FRAG A-004", "tle_line1": "1 33559U 00001D   24001.50000000  .00003500  00000-0  50000-4 0  9994", "tle_line2": "2 33559  86.4000 180.0000 0001800  90.0000 270.0000 15.14000000100004"},
+        {"norad_id": 33560, "name": "IRIDIUM 33 FRAG A-005", "tle_line1": "1 33560U 00001E   24001.50000000  .00003500  00000-0  50000-4 0  9995", "tle_line2": "2 33560  86.4000 180.0000 0001800  90.0000 270.0000 15.14000000100005"},
+        {"norad_id": 33561, "name": "IRIDIUM 33 FRAG B-001", "tle_line1": "1 33561U 00001F   24001.50000000  .00003600  00000-0  50000-4 0  9996", "tle_line2": "2 33561  86.4100 180.0000 0001800  90.0000 270.0000 15.14100000100001"},
+        {"norad_id": 33562, "name": "IRIDIUM 33 FRAG B-002", "tle_line1": "1 33562U 00001G   24001.50000000  .00003600  00000-0  50000-4 0  9997", "tle_line2": "2 33562  86.4100 180.0000 0001800  90.0000 270.0000 15.14100000100002"},
+        {"norad_id": 33563, "name": "IRIDIUM 33 FRAG B-003", "tle_line1": "1 33563U 00001H   24001.50000000  .00003600  00000-0  50000-4 0  9998", "tle_line2": "2 33563  86.4100 180.0000 0001800  90.0000 270.0000 15.14100000100003"},
+        {"norad_id": 33564, "name": "IRIDIUM 33 FRAG B-004", "tle_line1": "1 33564U 00001I   24001.50000000  .00003600  00000-0  50000-4 0  9999", "tle_line2": "2 33564  86.4100 180.0000 0001800  90.0000 270.0000 15.14100000100004"},
+        {"norad_id": 33565, "name": "IRIDIUM 33 FRAG B-005", "tle_line1": "1 33565U 00001J   24001.50000000  .00003600  00000-0  50000-4 0  9990", "tle_line2": "2 33565  86.4100 180.0000 0001800  90.0000 270.0000 15.14100000100005"},
+        {"norad_id": 33566, "name": "COSMOS 2251 FRAG C-001", "tle_line1": "1 33566U 00001K   24001.50000000  .00003700  00000-0  50000-4 0  9991", "tle_line2": "2 33566  86.4200 180.0000 0001800  90.0000 270.0000 15.14200000100001"},
+        {"norad_id": 33567, "name": "COSMOS 2251 FRAG C-002", "tle_line1": "1 33567U 00001L   24001.50000000  .00003700  00000-0  50000-4 0  9992", "tle_line2": "2 33567  86.4200 180.0000 0001800  90.0000 270.0000 15.14200000100002"},
+        {"norad_id": 33568, "name": "COSMOS 2251 FRAG C-003", "tle_line1": "1 33568U 00001M   24001.50000000  .00003700  00000-0  50000-4 0  9993", "tle_line2": "2 33568  86.4200 180.0000 0001800  90.0000 270.0000 15.14200000100003"},
+        {"norad_id": 33569, "name": "COSMOS 2251 FRAG C-004", "tle_line1": "1 33569U 00001N   24001.50000000  .00003700  00000-0  50000-4 0  9994", "tle_line2": "2 33569  86.4200 180.0000 0001800  90.0000 270.0000 15.14200000100004"},
+        {"norad_id": 33570, "name": "COSMOS 2251 FRAG C-005", "tle_line1": "1 33570U 00001O   24001.50000000  .00003700  00000-0  50000-4 0  9995", "tle_line2": "2 33570  86.4200 180.0000 0001800  90.0000 270.0000 15.14200000100005"}
+      ]
+    },
+    {
+      "event_name": "Fengyun-1C Anti-Satellite Test",
+      "event_date": "2007-01-11",
+      "event_type": "ASAT Test",
+      "parent_satellites": ["FENGYUN 1C (NORAD 22495)"],
+      "altitude_km": 865,
+      "total_debris_tracked": 3500,
+      "description": "On January 11, 2007, China launched a kinetic kill vehicle that destroyed the Fengyun-1C weather satellite at 865km altitude. This created the largest man-made debris cloud in history at that time, with over 3,500 trackable fragments and an estimated 2 million smaller pieces.",
+      "threat_to_comms": "CRITICAL - The 865km altitude band is crossed by numerous communication satellites and the debris field continues to expand due to atmospheric drag variations",
+      "fragments": [
+        {"norad_id": 33571, "name": "FENGYUN 1C FRAG A-001", "tle_line1": "1 33571U 00001A   24001.50000000  .00004000  00000-0  60000-4 0  9991", "tle_line2": "2 33571  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100001"},
+        {"norad_id": 33572, "name": "FENGYUN 1C FRAG A-002", "tle_line1": "1 33572U 00001B   24001.50000000  .00004000  00000-0  60000-4 0  9992", "tle_line2": "2 33572  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100002"},
+        {"norad_id": 33573, "name": "FENGYUN 1C FRAG A-003", "tle_line1": "1 33573U 00001C   24001.50000000  .00004000  00000-0  60000-4 0  9993", "tle_line2": "2 33573  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100003"},
+        {"norad_id": 33574, "name": "FENGYUN 1C FRAG A-004", "tle_line1": "1 33574U 00001D   24001.50000000  .00004000  00000-0  60000-4 0  9994", "tle_line2": "2 33574  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100004"},
+        {"norad_id": 33575, "name": "FENGYUN 1C FRAG A-005", "tle_line1": "1 33575U 00001E   24001.50000000  .00004000  00000-0  60000-4 0  9995", "tle_line2": "2 33575  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100005"},
+        {"norad_id": 33576, "name": "FENGYUN 1C FRAG A-006", "tle_line1": "1 33576U 00001F   24001.50000000  .00004000  00000-0  60000-4 0  9996", "tle_line2": "2 33576  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100006"},
+        {"norad_id": 33577, "name": "FENGYUN 1C FRAG A-007", "tle_line1": "1 33577U 00001G   24001.50000000  .00004000  00000-0  60000-4 0  9997", "tle_line2": "2 33577  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100007"},
+        {"norad_id": 33578, "name": "FENGYUN 1C FRAG A-008", "tle_line1": "1 33578U 00001H   24001.50000000  .00004000  00000-0  60000-4 0  9998", "tle_line2": "2 33578  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100008"},
+        {"norad_id": 33579, "name": "FENGYUN 1C FRAG A-009", "tle_line1": "1 33579U 00001I   24001.50000000  .00004000  00000-0  60000-4 0  9999", "tle_line2": "2 33579  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100009"},
+        {"norad_id": 33580, "name": "FENGYUN 1C FRAG A-010", "tle_line1": "1 33580U 00001J   24001.50000000  .00004000  00000-0  60000-4 0  9990", "tle_line2": "2 33580  86.4500 180.0000 0002000  90.0000 270.0000 15.14300000100010"},
+        {"norad_id": 33581, "name": "FENGYUN 1C FRAG B-001", "tle_line1": "1 33581U 00001K   24001.50000000  .00004100  00000-0  60000-4 0  9991", "tle_line2": "2 33581  86.4600 180.0000 0002000  90.0000 270.0000 15.14400000100001"},
+        {"norad_id": 33582, "name": "FENGYUN 1C FRAG B-002", "tle_line1": "1 33582U 00001L   24001.50000000  .00004100  00000-0  60000-4 0  9992", "tle_line2": "2 33582  86.4600 180.0000 0002000  90.0000 270.0000 15.14400000100002"},
+        {"norad_id": 33583, "name": "FENGYUN 1C FRAG B-003", "tle_line1": "1 33583U 00001M   24001.50000000  .00004100  00000-0  60000-4 0  9993", "tle_line2": "2 33583  86.4600 180.0000 0002000  90.0000 270.0000 15.14400000100003"},
+        {"norad_id": 33584, "name": "FENGYUN 1C FRAG B-004", "tle_line1": "1 33584U 00001N   24001.50000000  .00004100  00000-0  60000-4 0  9994", "tle_line2": "2 33584  86.4600 180.0000 0002000  90.0000 270.0000 15.14400000100004"},
+        {"norad_id": 33585, "name": "FENGYUN 1C FRAG B-005", "tle_line1": "1 33585U 00001O   24001.50000000  .00004100  00000-0  60000-4 0  9995", "tle_line2": "2 33585  86.4600 180.0000 0002000  90.0000 270.0000 15.14400000100005"}
+      ]
+    },
+    {
+      "event_name": "Cosmos 1408 Anti-Satellite Test",
+      "event_date": "2021-11-15",
+      "event_type": "ASAT Test",
+      "parent_satellites": ["COSMOS 1408 (NORAD 70005)"],
+      "altitude_km": 480,
+      "total_debris_tracked": 1500,
+      "description": "On November 15, 2021, Russia tested an anti-satellite weapon by destroying the Cosmos 1408 satellite at approximately 480km altitude. This created a debris cloud that immediately threatened the International Space Station and continues to pose risks to LEO operations including Starlink satellites.",
+      "threat_to_comms": "CRITICAL - The 480km altitude directly intersects with Starlink's primary orbital shells (550km), creating ongoing conjunction risks for one of the largest communication constellations",
+      "fragments": [
+        {"norad_id": 33586, "name": "COSMOS 1408 FRAG A-001", "tle_line1": "1 33586U 00001A   24001.50000000  .00003000  00000-0  45000-4 0  9991", "tle_line2": "2 33586  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100001"},
+        {"norad_id": 33587, "name": "COSMOS 1408 FRAG A-002", "tle_line1": "1 33587U 00001B   24001.50000000  .00003000  00000-0  45000-4 0  9992", "tle_line2": "2 33587  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100002"},
+        {"norad_id": 33588, "name": "COSMOS 1408 FRAG A-003", "tle_line1": "1 33588U 00001C   24001.50000000  .00003000  00000-0  45000-4 0  9993", "tle_line2": "2 33588  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100003"},
+        {"norad_id": 33589, "name": "COSMOS 1408 FRAG A-004", "tle_line1": "1 33589U 00001D   24001.50000000  .00003000  00000-0  45000-4 0  9994", "tle_line2": "2 33589  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100004"},
+        {"norad_id": 33590, "name": "COSMOS 1408 FRAG A-005", "tle_line1": "1 33590U 00001E   24001.50000000  .00003000  00000-0  45000-4 0  9995", "tle_line2": "2 33590  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100005"},
+        {"norad_id": 33591, "name": "COSMOS 1408 FRAG A-006", "tle_line1": "1 33591U 00001F   24001.50000000  .00003000  00000-0  45000-4 0  9996", "tle_line2": "2 33591  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100006"},
+        {"norad_id": 33592, "name": "COSMOS 1408 FRAG A-007", "tle_line1": "1 33592U 00001G   24001.50000000  .00003000  00000-0  45000-4 0  9997", "tle_line2": "2 33592  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100007"},
+        {"norad_id": 33593, "name": "COSMOS 1408 FRAG A-008", "tle_line1": "1 33593U 00001H   24001.50000000  .00003000  00000-0  45000-4 0  9998", "tle_line2": "2 33593  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100008"},
+        {"norad_id": 33594, "name": "COSMOS 1408 FRAG A-009", "tle_line1": "1 33594U 00001I   24001.50000000  .00003000  00000-0  45000-4 0  9999", "tle_line2": "2 33594  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100009"},
+        {"norad_id": 33595, "name": "COSMOS 1408 FRAG A-010", "tle_line1": "1 33595U 00001J   24001.50000000  .00003000  00000-0  45000-4 0  9990", "tle_line2": "2 33595  86.3500 180.0000 0001800  90.0000 270.0000 15.14500000100010"},
+        {"norad_id": 33596, "name": "COSMOS 1408 FRAG B-001", "tle_line1": "1 33596U 00001K   24001.50000000  .00003100  00000-0  45000-4 0  9991", "tle_line2": "2 33596  86.3600 180.0000 0001800  90.0000 270.0000 15.14600000100001"},
+        {"norad_id": 33597, "name": "COSMOS 1408 FRAG B-002", "tle_line1": "1 33597U 00001L   24001.50000000  .00003100  00000-0  45000-4 0  9992", "tle_line2": "2 33597  86.3600 180.0000 0001800  90.0000 270.0000 15.14600000100002"},
+        {"norad_id": 33598, "name": "COSMOS 1408 FRAG B-003", "tle_line1": "1 33598U 00001M   24001.50000000  .00003100  00000-0  45000-4 0  9993", "tle_line2": "2 33598  86.3600 180.0000 0001800  90.0000 270.0000 15.14600000100003"},
+        {"norad_id": 33599, "name": "COSMOS 1408 FRAG B-004", "tle_line1": "1 33599U 00001N   24001.50000000  .00003100  00000-0  45000-4 0  9994", "tle_line2": "2 33599  86.3600 180.0000 0001800  90.0000 270.0000 15.14600000100004"},
+        {"norad_id": 33600, "name": "COSMOS 1408 FRAG B-005", "tle_line1": "1 33600U 00001O   24001.50000000  .00003100  00000-0  45000-4 0  9995", "tle_line2": "2 33600  86.3600 180.0000 0001800  90.0000 270.0000 15.14600000100005"}
+      ]
+    }
+  ],
+  "debris_statistics": {
+    "by_altitude_band": [
+      {"altitude_min_km": 400, "altitude_max_km": 600, "debris_count": 4500, "primary_sources": "Starlink shell, ISS vicinity, Cosmos 1408 debris"},
+      {"altitude_min_km": 600, "altitude_max_km": 800, "debris_count": 2500, "primary_sources": "Iridium 33/Cosmos 2251 collision fragments"},
+      {"altitude_min_km": 800, "altitude_max_km": 1000, "debris_count": 5500, "primary_sources": "Fengyun-1C ASAT test, Cosmos 2251 debris"},
+      {"altitude_min_km": 1000, "altitude_max_km": 1200, "debris_count": 800, "primary_sources": "Various satellite breakups, spent rocket bodies"}
+    ],
+    "tracked_vs_untracked": {
+      "tracked_objects": 320,
+      "estimated_untracked_debris_gt_1cm": 1000000,
+      "estimated_untracked_debris_gt_1mm": 300000000
+    },
+    "growth_rate": {
+      "annual_collision_events": 1,
+      "fragments_per_collision": 2000,
+      "projected_debris_increase_per_year": "5% in LEO bands"
+    }
+  }
+}

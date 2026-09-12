@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "name": "Space Tech & Orbital Sustainability Problem Context",
+    "description": "Comprehensive context data supporting the problem statement for Bit-N-Bulid",
+    "problem_statement": "Space Tech & Orbital Sustainability: Build autonomous agents to track space debris, optimize satellite maneuver planning, or coordinate open-source orbital traffic management to protect global communication infrastructure.",
+    "generated": "2026-09-12"
+  },
+  "problem_background": {
+    "title": "The Growing Space Debris Threat",
+    "summary": "Human activity in space has created an orbital environment with over 36,500 trackable debris objects, millions of smaller untrackable fragments, and increasing collision risk to critical communication infrastructure.",
+    "key_facts": [
+      "Over 36,500 objects larger than 10cm are tracked by space surveillance networks",
+      "An estimated 1 million objects between 1-10cm exist in LEO, too small to track but large enough to disable satellites",
+      "Over 300 million objects smaller than 1cm create constant erosion risk to spacecraft surfaces",
+      "LEO (200-2000km) contains 90% of all orbital debris due to high concentration of satellites and fragmentation events",
+      "Average relative velocity in LEO collisions: 10-15 km/s (creating tremendous kinetic energy)",
+      "A 1cm object at 10km/s has kinetic energy equivalent to a small car at highway speeds"
+    ],
+    "critical_fragmentation_events": [
+      {
+        "event": "Cosmos 1408 ASAT Test (2021)",
+        "date": "2021-11-15",
+        "country": "Russia",
+        "description": "Anti-satellite missile test destroyed Cosmos 1408 satellite at 480km altitude",
+        "debris_created": "1,500+ trackable fragments",
+        "impact": "Immediate threat to ISS, ongoing risk to Starlink and other LEO constellations",
+        "orbital_decay": "Slow decay at 480km, debris will remain for decades",
+        "notable_incidents": "ISS performed debris avoidance maneuver 1 day after the test"
+      },
+      {
+        "event": "Iridium 33 / Cosmos 2251 Collision (2009)",
+        "date": "2009-02-10",
+        "type": "Accidental Collision",
+        "description": "First major accidental collision between two intact satellites in Earth orbit",
+        "debris_created": "2,000+ trackable fragments",
+        "impact": "Largest accidental debris cloud, created new collision risk in 780km band",
+        "orbital_decay": "Very slow decay, debris field will remain hazardous for 50+ years",
+        "notable_incidents": "Iridium satellites continue to encounter debris from this event over 15 years later"
+      },
+      {
+        "event": "Fengyun-1C ASAT Test (2007)",
+        "date": "2007-01-11",
+        "country": "China",
+        "description": "Kinetic kill vehicle destroyed Fengyun-1C weather satellite at 865km altitude",
+        "debris_created": "3,500+ trackable fragments (largest single event)",
+        "impact": "Created largest debris cloud in history, significantly increased overall orbital debris density",
+        "orbital_decay": "At 865km, debris will persist for 100+ years",
+        "notable_incidents": "This single event increased trackable debris population by 25%"
+      }
+    ]
+  },
+  "communication_infrastructure_at_risk": {
+    "global_dependence": {
+      "population_relying_on_satellite_comms": "3.2 billion people",
+      "percentage_of_global_data": "40% of all data transmission involves satellites",
+      "critical_dependencies": [
+        "Emergency communications in remote areas",
+        "Maritime safety and navigation",
+        "Aviation tracking and communications",
+        "Rural broadband internet access",
+        "Disaster response coordination",
+        "Military and government secure communications",
+        "Weather monitoring and climate science",
+        "Global positioning and timing services"
+      ]
+    },
+    "constellation_stakes": {
+      "starlink": {
+        "satellites": 158,
+        "users": "2 million+ subscribers",
+        "countries_served": 70,
+        "annual_revenue_billion_usd": 2.5,
+        "replacement_cost_billion_usd": 1.5,
+        "deployment_redeployment_time_months": 18
+      },
+      "iridium_next": {
+        "satellites": 66,
+        "users": "1 million+ subscribers",
+        "coverage": "100% of Earth including poles",
+        "critical_uses": "Maritime, aviation, emergency, military",
+        "annual_revenue_billion_usd": 0.8,
+        "replacement_cost_billion_usd": 1.2
+      },
+      "oneweb": {
+        "satellites": 43,
+        "users": " hundreds of thousands",
+        "primary_markets": "Government, enterprise, underserved regions",
+        "annual_revenue_billion_usd": 0.3,
+        "replacement_cost_billion_usd": 0.6,
+        "strategic_importance": "Bridging digital divide in developing nations"
+      },
+      "globalstar": {
+        "satellites": 15,
+        "users": "hundreds of thousands",
+        "primary_uses": "Asset tracking, emergency beacons, remote communications",
+        "annual_revenue_billion_usd": 0.15,
+        "replacement_cost_billion_usd": 0.3
+      }
+    },
+    "economic_impact_of_loss": {
+      "single_starlink_loss": "$250,000-400,000 per satellite",
+      "service_disruption_cost_per_day": "$2.8 million for major constellation",
+      "emergency_comms_loss_life_risk": "Significant - remote operations depend on satellite connectivity",
+      "total_economic_value_at_risk": "$50+ billion across all constellations"
+    }
+  },
+  "autorithm_and_maneuver_context": {
+    "why_autonomous_agents_needed": [
+      "Human operators cannot manually screen 600+ objects for thousands of potential conjunctions",
+      "Conjunction events can develop in minutes to hours, requiring rapid automated response",
+      "Multiple operators may propose conflicting maneuvers for the same event, requiring coordination",
+      "Global communication infrastructure operates 24/7 across time zones, demanding continuous monitoring",
+      "Manual mission planning would require 100+ human operators to match current automated capabilities"
+    ],
+    "autorithm_components": {
+      "tracking": {
+        "algorithm": "SGP4 (Simplified General Perturbations 4)",
+        "purpose": "Propagate TLE orbital elements forward in time to predict satellite positions",
+        "accuracy": "Within 1-2km for LEO satellites with fresh TLEs",
+        "update_frequency": "Every 60 seconds for current system",
+        "inputs": "TLE data (2-line element sets)",
+        "outputs": "Position and velocity vectors in ECI coordinates"
+      },
+      "conjunction_screening": {
+        "method": "Pairwise distance screening",
+        "screening_distance": "5.0 km threshold",
+        "approach": "Compare all object pairs within screening horizon",
+        "time_horizon": "24 hours forward propagation",
+        "computational_complexity": "O(n²) for n objects",
+        "current_performance": "183,921 pairs screened per 60-second cycle"
+      },
+      "collision_probability": {
+        "model": "Foster/Chan 2D probability projection",
+        "method": "Pc = (r² / 2σ²) × exp(-d² / 2σ²)",
+        "parameters": {
+          "r": "Combined hard body radius (~10m for communication satellites)",
+          "d": "Miss distance at closest approach",
+          "σ": "Position uncertainty covariance (estimated from miss distance)"
+        },
+        "risk_thresholds": {
+          "CRITICAL": "Pc > 1%",
+          "HIGH": "Pc > 0.1%",
+          "MEDIUM": "Pc > 0.01%",
+          "LOW": "Pc ≤ 0.01%"
+        }
+      },
+      "maneuver_planning": {
+        "approach": "Generate ranked delta-v options in multiple directions",
+        "candidate_directions": ["Prograde", "Retrograde", "Radial+", "Radial-", "Cross-track+"],
+        "delta_v_range_m_s": [0.5, 1.0, 2.0],
+        "constraints": "Maximum delta-v budget (typically 2 m/s per maneuver)",
+        "selection_criteria": "Lowest post-maneuver Pc with minimum delta-v expenditure",
+        "typical_delta_v_used": "0.5-1.5 m/s depending on conjunction geometry"
+      },
+      "multi_operator_coordination": {
+        "purpose": "Resolve conflicts when multiple operators propose maneuvers for same conjunction",
+        "conflict_rule": "Lowest delta-v wins (most efficient use of fuel)",
+        "tiebreaker": "Earliest submission time",
+        "output": "Immutable audit trail of all proposals and decisions",
+        "benefits": "Fair resource allocation, fuel conservation, transparent decision-making"
+      }
+    }
+  },
+  "sustainability_context": {
+    "kessaret_terms": [
+      "Orbital sustainability",
+      "Space debris mitigation",
+      "Responsible space operations",
+      "Collision avoidance as standard practice",
+      "Transparency in space activities",
+      "International cooperation for space safety"
+    ],
+    "long_term_vision": {
+      "goal": "Preserve LEO for future generations of communication, navigation, and Earth observation services",
+      "timeline": "Decisions made today affect orbital environment for 50-100 years",
+      "key_principles": [
+        "Minimize new debris creation",
+        "Active debris removal in critical bands",
+        "Open data sharing for improved conjunction assessment",
+        "Standardized maneuver coordination procedures",
+        "Investment in improved tracking and prediction capabilities"
+      ]
+    },
+    "bitnbulid_role": {
+      "mission": "Provide autonomous, transparent, and auditable orbital traffic management to protect global communication infrastructure",
+      "approach": "Combine SGP4 tracking, Foster/Chan probability, automated maneuver planning, and multi-operator coordination",
+      "unique_value": "Open-source orbital safety system that protects critical infrastructure while maintaining operational transparency",
+      "alignment_with_sustainability": "System enables continued safe use of LEO for all operators, preventing cascading Kessler Syndrome scenarios"
+    }
+  },
+  "visualization_references": {
+    "dashboard_context_cards": [
+      {
+        "title": "Global Comms at Risk",
+        "stats": "267 communication satellites under active protection",
+        "subtitle": "Starlink · Iridium NEXT · OneWeb · Globalstar"
+      },
+      {
+        "title": "Active Debris Threats",
+        "stats": "320 tracked debris objects from 4 major fragmentation events",
+        "subtitle": "Cosmos 1408 · Iridium/Cosmos · Fengyun-1C · Other"
+      },
+      {
+        "title": "Protection Provided",
+        "stats": "12 collisions prevented · 89 maneuvers executed",
+        "subtitle": "Protecting $50B+ in communication infrastructure"
+      }
+    ],
+    "timeline_events": [
+      {"year": 2007, "event": "Fengyun-1C ASAT test creates largest debris cloud", "impact": "Critical"},
+      {"year": 2009, "event": "Iridium 33 / Cosmos 2251 collision", "impact": "Critical"},
+      {"year": 2021, "event": "Cosmos 1408 ASAT test, ISS threatened", "impact": "Critical"},
+      {"year": 2024, "event": "Starlink reaches 158 satellites in LEO", "impact": "High"},
+      {"year": 2026, "event": "Bit-N-Bulid system operational for autonomous traffic management", "impact": "High"}
+    ]
+  }
+}
